@@ -1,0 +1,61 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: bisque;
+}
+
+h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1,
+p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+  margin: 0 auto;
+  /*% ^to center an element */
+  max-width: 500px;
+  min-width: 300px;
+  width: 60vw;
+  padding-bottom: 2em;
+}
+
+label,
+p,
+legend {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="number"] {
+  width: 40px;
+}
+
+fieldset {
+  border: 0px solid black;
+  padding: 1rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+legend {
+  padding-top: 0.5em;
+  /*% ^legend will cause a large gap between the inputs and the legend so you need to lower the padding */
+}
+
+.inline {
+  vertical-align: baseline;
+  /*% ^to make the text and the buttons align. you dont need it if the adjustments make it worse. you can experiment with the diff options to see which one works best*/
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}

@@ -50,8 +50,10 @@ select {
 .inline {
   /* display: unset; */
   width: unset;
+  /*% ^to remove the rule from above which sets the input elements to 100% as this will cause the radio buttons to take up the entire width */
   margin: 0 0.5em 0 0;
   vertical-align: middle;
+  /*% ^to make the text on the same line as the buttons/checkboxes can be used as required*/
 }
 
 input,

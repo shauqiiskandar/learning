@@ -24,8 +24,9 @@
         /></label>
         <label for="new-password"
           >Create a New Password:
-          <input pattern="[a-z0-5]{8,}" required type="password" id="new-password"
-        /></label>
+          <input pattern="[a-z0-5]{8,}" required type="password" id="new-password" />
+          <!--% ^the pattern defines the required email formatting. if an incorrect format is input, a html validation error will occur -->
+        </label>
       </fieldset>
       <fieldset>
         <label for="personal-account">

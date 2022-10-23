@@ -9,16 +9,107 @@
   </head>
   <body>
     <header>
-      <h1 id="title">Survey Form</h1>
-      <p id="description">Survey form project</p>
+      <h1 id="title">Travel Survey Form</h1>
+      <p id="description">
+        Surveying people's preferred travel destination and travel style.
+      </p>
     </header>
     <main>
       <form action="" id="survey-form">
         <fieldset>
-          <label for="">
-            <input type="text" name="" id="" />
+          <label for="name" id="name-label">
+            Name:
+            <input type="text" name="" id="name" placeholder="Your name here" required />
+          </label>
+          <label for="email" id="email-label">
+            Email:
+            <input
+              type="email"
+              name=""
+              id="email"
+              required
+              placeholder="Your email here"
+            />
+          </label>
+          <label for="number" id="number-label">
+            Age:
+            <input
+              type="number"
+              name=""
+              min="15"
+              max="100"
+              id="number"
+              required
+              placeholder="0"
+            />
+          </label>
+          <label for="dropdown">
+            Where would you like to travel to?
+            <select name="dropdown" id="dropdown">
+              <option value="japan">Japan</option>
+              <option value="korea">Korea</option>
+              <option value="taiwan">Taiwan</option>
+            </select>
           </label>
         </fieldset>
+        <fieldset>
+          <legend>What is your preferred travel style</legend>
+          <label for="rad">
+            <input type="radio" class="inline" name="style" value="city" id="rad" />
+            City
+          </label>
+          <label for="rad2">
+            <input type="radio" class="inline" name="style" value="nature" id="rad2" />
+            Nature
+          </label>
+          <label for="rad3">
+            <input type="radio" class="inline" name="style" value="suburban" id="rad3" />
+            Suburban
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Preferred accomodation</legend>
+          <label for="hotel">
+            <input
+              type="checkbox"
+              class="inline"
+              name="accomodation"
+              value="hotel"
+              id="hotel"
+            />
+            Hotel
+          </label>
+
+          <label for="hostel"
+            ><input
+              type="checkbox"
+              class="inline"
+              name="accomodation"
+              value="hostel"
+              id="hostel"
+            />
+            Hostel
+          </label>
+
+          <label for="airbnb">
+            <input
+              type="checkbox"
+              class="inline"
+              name="accomodation"
+              value="airbnb"
+              id="airbnb"
+            />
+            Airbnb
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="special-requirements">
+            Please state any special requirements:
+            <textarea name="" id="" cols="35" rows="1"></textarea>
+          </label>
+        </fieldset>
+
+        <input type="submit" id="submit" value="Submit" />
       </form>
     </main>
     <footer></footer>
