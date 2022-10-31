@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f5f6f7;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 32px;
+  background-color: #0a0a23;
+  color: #fff;
+  border-bottom: 4px solid #fdb347;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*% ^to center the items horizontally since flex dir is row */
+  align-items: center;
+  /*% ^ to center the items vertically */
+  padding: 20px 10px;
+  max-width: 1400px;
+  /*% ^if you only have this then the items will stick to the starting point as the max width has been reached. Therefore you still need to align the items horizontally with an additional rule as below*/
+  margin: 0 auto;
+  gap: 16px;
+  /*% ^to specify the gutter width between rows and columns */
+}
+
+.gallery img {
+  width: 100%;
+  /*% ^so that each image takes up 100% of the provided max-width */
+  max-width: 350px;
+  /*% ^to specify the max width */
+  height: 300px;
+  /*% ^ to force uniform height */
+  object-fit: cover;
+  /*% ^to make the images fill you use cover value */
+  border-radius: 10px;
+}
+
+.gallery::after {
+  /*% ^creates an element which is the last child of the selected element.It is often used to add cosmetic content to an element with the content property. It is inline by default. You can use it to add an empty element after the last image so that we can push it to the left*/
+  content: "";
+  /*% ^if just this is added it will still move the picture but its not enough so we need to add more width as below. if the attribute none is used it will not be affected so an empty string must be used */
+  width: 350px;
+}
