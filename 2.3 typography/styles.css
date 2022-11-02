@@ -1,0 +1,18 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  /*% ^ fonts with spaces must be wrapped in quotes */
+}
+
+.label {
+  border: 2px solid black;
+  width: 270px;
+  /*% ^ to make the box smaller */
+  margin: 20px auto;
+  /*% ^center the element */
+  padding: 0 7px;
+  /*% ^space from the border */
+}
