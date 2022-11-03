@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  /*% ^ without this, Only the content box will take up 270 pixels. With this, the total width Will be 270 pixels. The content Box would Reduce its width Proportionately to Include the dimensions of The padding and the border would add up to 270 pixels. */
+}
+
 html {
   font-size: 16px;
 }
@@ -15,4 +20,28 @@ body {
   /*% ^center the element */
   padding: 0 7px;
   /*% ^space from the border */
+}
+
+header h1 {
+  text-align: center;
+  margin: -4px 0;
+  /*% ^ to To reduce the top and bottom margin By SPECIFYING the margin amount. it doesn't subtract from the original margin. */
+  letter-spacing: 0.15px;
+}
+
+p {
+  margin: 0;
+}
+
+.divider {
+  border-bottom: 1px solid #888989;
+  margin: 2px 0;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.right {
+  float: right;
 }
