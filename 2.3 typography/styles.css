@@ -45,3 +45,14 @@ p {
 .right {
   float: right;
 }
+
+.lg {
+  height: 10px;
+}
+
+.lg,
+.md {
+  background-color: black;
+  border: 0;
+  /*% ^Always check your elements padding, border and margin Dimensions, And adjust when required. */
+}
