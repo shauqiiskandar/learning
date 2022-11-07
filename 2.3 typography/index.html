@@ -23,6 +23,24 @@
       <div class="divider lg"></div>
       <div class="calories-info">
         <p class="bold sm-text">Amount per serving</p>
+        <h1>Calories <span class="right">230</span></h1>
+      </div>
+      <div class="divider md"></div>
+      <div class="daily-value sm-text">
+        <p class="right bold no-divider">% Daily Value *</p>
+        <!--% ^line is outside .label box initially because of the .right class where it is floated -->
+        <div class="divider"></div>
+        <p>
+          <span class="bold">Total Fat</span> 8g
+          <span class="bold right">10%</span>
+        </p>
+        <!--% ^This line shows a lot of inline Styling -->
+        <p class="indent no-divider">
+          Saturated Fat 1g <span class="bold right">5%</span>
+        </p>
+        <!--% ^ we need to put the no divider because otherwise they would have the .daily-value p selector rule applied to it. There would be an extra line under these elements as they already have a divider or a line under them. -->
+        <div class="divider"></div>
+        <p class="indent no-divider"><i>Trans</i> Fat 0g</p>
       </div>
     </div>
   </body>

@@ -36,6 +36,8 @@ p {
 .divider {
   border-bottom: 1px solid #888989;
   margin: 2px 0;
+  clear: right;
+  /*% ^pushes past any elements that are floated to the right. floated elements are taken out of the normal document flow and they can appear on top of each other which is the case if the have the divider after the %daily value floated element. the divider appears to layer on top of the floated element when no clear is applied */
 }
 
 .bold {
@@ -55,4 +57,31 @@ p {
   background-color: black;
   border: 0;
   /*% ^Always check your elements padding, border and margin Dimensions, And adjust when required. */
+}
+
+.sm-text {
+  font-size: 0.85rem;
+}
+
+.calories-info h1 {
+  margin: -5px -2px;
+  overflow: hidden;
+}
+
+.calories-info span {
+  font-size: 1.2em;
+  margin-top: -7px;
+}
+
+.md {
+  height: 5px;
+  /*% ^we wont be able to see the border from .divider because of  the .lg .md rule above which makes border 0. the fill that comes from this element after you give it height is because of the background colour from the .lg .md rule */
+}
+
+.indent {
+  margin-left: 1em;
+}
+
+.daily-value p:not(.no-divider) {
+  border-bottom: 1px solid #888989;
 }
