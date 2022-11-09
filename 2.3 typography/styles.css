@@ -85,3 +85,8 @@ p {
 .daily-value p:not(.no-divider) {
   border-bottom: 1px solid #888989;
 }
+/*% ^ so that this rule only applies to p elements that do not have the .no-divider class */
+
+.dbl-indent {
+  margin-left: 2em;
+}
