@@ -17,8 +17,73 @@
         alt=""
       />
       <h1>HTML/CSS Quiz</h1>
-      <nav></nav>
+      <nav>
+        <ul>
+          <li><a href="#student-info">INFO</a></li>
+          <li><a href="#html-questions">HTML</a></li>
+          <li><a href="#css-questions">CSS</a></li>
+          <!-- % to link to another part of the page using ids, the # must be included in the href -->
+        </ul>
+      </nav>
     </header>
-    <main></main>
+    <main>
+      <form
+        action="https://freecodecamp.org/practice-project/accessibility-quiz"
+        method="post"
+      >
+        <!-- % he role attribute can be used to indicate the purpose behind an element on the page to assistive technologies. The role attribute is a part of the Web Accessibility Initiative (WAI), and accepts preset values. -->
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Student Info</h2>
+          <div class="info">
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div class="info">
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="info">
+            <label for="DOB"
+              >Date of birth:<span class="sr-only">(Date of Birth)</span></label
+            >
+            <input type="date" id="DOB" name="DOB" />
+          </div>
+        </section>
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">HTML Questions</h2>
+          <div class="question-block">
+            <p>1</p>
+            <fieldset name="question1" class="question">
+              <legend>Is html hard?</legend>
+              <ul class="answers-list">
+                <li>
+                  <label for=""><input id="q1-a1" type="radio" name="" id="" /></label>
+                </li>
+                <li>
+                  <label for=""><input id="q1-a2" type="radio" name="" id="" /></label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="question-block">
+            <p>2</p>
+            <fieldset name="question2" class="question">
+              <legend>Is css difficult?</legend>
+              <ul class="answers-list">
+                <li>
+                  <label for=""><input id="q2-a1" type="radio" name="" id="" /></label>
+                </li>
+                <li>
+                  <label for=""><input id="q2-a2" type="radio" name="" id="" /></label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">CSS Questions</h2>
+        </section>
+      </form>
+    </main>
   </body>
 </html>
