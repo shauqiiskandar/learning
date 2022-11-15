@@ -57,10 +57,26 @@
               <legend>Is html hard?</legend>
               <ul class="answers-list">
                 <li>
-                  <label for=""><input id="q1-a1" type="radio" name="" id="" /></label>
+                  <label for="q1-a1"
+                    ><input
+                      id="q1-a1"
+                      type="radio"
+                      name="html"
+                      id=""
+                      value="True"
+                    />True</label
+                  >
                 </li>
                 <li>
-                  <label for=""><input id="q1-a2" type="radio" name="" id="" /></label>
+                  <label for="q1-a2"
+                    ><input
+                      id="q1-a2"
+                      type="radio"
+                      name="html"
+                      id=""
+                      value="False"
+                    />False</label
+                  >
                 </li>
               </ul>
             </fieldset>
@@ -71,10 +87,26 @@
               <legend>Is css difficult?</legend>
               <ul class="answers-list">
                 <li>
-                  <label for=""><input id="q2-a1" type="radio" name="" id="" /></label>
+                  <label for="q2-a1"
+                    ><input
+                      id="q2-a1"
+                      type="radio"
+                      name="css"
+                      id=""
+                      value="True"
+                    />True</label
+                  >
                 </li>
                 <li>
-                  <label for=""><input id="q2-a2" type="radio" name="" id="" /></label>
+                  <label for="q2-a2"
+                    ><input
+                      id="q2-a2"
+                      type="radio"
+                      name="css"
+                      id=""
+                      value="False"
+                    />False</label
+                  >
                 </li>
               </ul>
             </fieldset>
@@ -82,6 +114,28 @@
         </section>
         <section role="region" aria-labelledby="css-questions">
           <h2 id="css-questions">CSS Questions</h2>
+          <div class="formrow">
+            <div class="question-block">
+              <label for="options">question1</label>
+            </div>
+            <div class="answer">
+              <select required name="yesorno" id="options">
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+            <div class="question-block"><label for="longans">question2</label></div>
+            <div class="answer">
+              <textarea
+                name="comments"
+                id="longans"
+                cols="30"
+                rows="10"
+                placeholder="text here"
+              ></textarea>
+            </div>
+          </div>
         </section>
       </form>
     </main>

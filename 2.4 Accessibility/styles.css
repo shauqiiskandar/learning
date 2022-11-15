@@ -50,3 +50,8 @@ h2 {
   border: 0;
 }
 /* % ^commonly used pattern to visually hide text for only screen readers */
+
+p::before {
+  content: "Question #";
+}
+/* ! ^not sure why they put the text this way instead of just putting it in the para */
