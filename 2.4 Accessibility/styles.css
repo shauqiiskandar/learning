@@ -10,6 +10,12 @@ header {
   height: 50px;
   background-color: #1b1b32;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  /* % ^if you want the header to stay at the top when scrolling use this */
+  top: 0;
+  /* % ^so that the element is moved to the top of the viewport. top and position are used in conjunction */
 }
 
 #logo {
@@ -22,11 +28,40 @@ header {
 h1 {
   color: #f1be32;
   font-size: min(5vw, 1.2em);
+  text-align: center;
+}
+
+main {
+  padding-top: 25px;
 }
 
 nav > ul {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
+
+nav li {
+  color: #dfdfe2;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;
+}
+
+nav li:hover {
+  background-color: #dfdfe2;
+  color: #1b1b32;
+  cursor: pointer;
+}
+
+li a {
+  color: inherit;
+  /* % ^you can use inherit or state the colour explicitly */
+  text-decoration: none;
 }
 
 h1,
