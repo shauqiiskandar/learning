@@ -1,3 +1,9 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
 body {
   background: #f5f6f7;
   color: #1b1b32;
@@ -71,7 +77,90 @@ h2 {
 
 h2 {
   border-bottom: 4px solid #dfdfe2;
+  margin-top: 0px;
+  padding-top: 60px;
 }
+
+section {
+  width: 80%;
+  margin: 0 auto 10px auto;
+  max-width: 600px;
+}
+
+input {
+  font-size: 20px;
+}
+
+p {
+  margin-top: 5px;
+  padding-left: 15px;
+  font-size: 20px;
+}
+
+input[type="submit"] {
+  display: block;
+  margin: 40px auto;
+  width: 40%;
+  padding: 15px;
+  font-size: 23px;
+  background: #d0d0d5;
+  border: 3px solid #3b3b4f;
+}
+
+button {
+  display: block;
+  margin: 40px auto;
+  width: 40%;
+  padding: 15px;
+  font-size: 23px;
+  background: #d0d0d5;
+  border: 3px solid #3b3b4f;
+}
+
+footer {
+  background-color: #2a2a40;
+  display: flex;
+  justify-content: center;
+}
+
+footer,
+footer a {
+  color: #d0d0d5;
+}
+/* % ^ the reason why we need to specify a rule for the a tag https://stackoverflow.com/questions/1144931/when-will-an-a-tag-not-inherit-color-attribute-of-parent-tag :Anchor tags do inherit color, linked or not. The only reason they don't in practice is because they already have their color set in the browser's default stylesheet. */
+
+address {
+  text-align: center;
+  padding: 1em 1em;
+}
+
+.info {
+  padding: 5px 0 0 5px;
+}
+
+.question {
+  padding-bottom: 0;
+  border: 0;
+}
+
+/* .info input,
+.info label {
+  display: inline-block;
+} */
+
+.info > input {
+  width: 50%;
+  text-align: left;
+  display: inline-block;
+}
+
+.info > label {
+  width: 10%;
+  min-width: 55px;
+  display: inline-block;
+  text-align: right;
+}
+/* % ^not sure why adjusting the width does not affect it */
 
 .sr-only {
   position: absolute;
@@ -86,7 +175,25 @@ h2 {
 }
 /* % ^commonly used pattern to visually hide text for only screen readers */
 
+.formrow {
+  margin-top: 5px;
+  padding: 0 5px 0 5px;
+}
+
+.question-block {
+  text-align: left;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 5px;
+}
+
+.answers-list {
+  list-style: none;
+  padding: 0;
+}
+
 p::before {
   content: "Question #";
 }
-/* ! ^not sure why they put the text this way instead of just putting it in the para */
+/* ! ^not sure why they put the text this way instead of just putting the text in the para */

@@ -19,10 +19,11 @@
       <h1>HTML/CSS Quiz</h1>
       <nav>
         <ul>
-          <li><a href="#student-info">INFO</a></li>
-          <li><a href="#html-questions">HTML</a></li>
-          <li><a href="#css-questions">CSS</a></li>
+          <li><a href="#student-info" accesskey="i">INFO</a></li>
+          <li><a href="#html-questions" accesskey="h">HTML</a></li>
+          <li><a href="#css-questions" accesskey="c">CSS</a></li>
           <!-- % to link to another part of the page using ids, the # must be included in the href -->
+          <!-- % ^accesskey accepts a space-separated list of access keys -->
         </ul>
       </nav>
     </header>
@@ -45,9 +46,7 @@
             <input type="email" id="email" name="email" />
           </div>
           <div class="info">
-            <label for="DOB"
-              >Date of birth:<span class="sr-only">(Date of Birth)</span></label
-            >
+            <label for="DOB">D.O.B:<span class="sr-only">(Date of Birth)</span></label>
             <input type="date" id="DOB" name="DOB" />
           </div>
         </section>
@@ -139,7 +138,8 @@
             </div>
           </div>
         </section>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit0" />
+        <button type="submit">Submit1</button>
       </form>
     </main>
 

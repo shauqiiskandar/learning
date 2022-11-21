@@ -1,0 +1,18 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.4em;
+  color: rgb(109, 109, 109);
+  text-align: center;
+}
+
+/* #img-div {
+  display: flex;
+  flex-direction: column;
+} */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
