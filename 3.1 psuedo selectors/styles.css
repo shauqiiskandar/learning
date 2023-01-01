@@ -1,0 +1,179 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #0a0a23;
+}
+
+section {
+  max-width: 40rem;
+  margin: 0 auto;
+  border: 2px solid #d0d0d5;
+}
+
+h1 {
+  max-width: 37.25rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+h1 .flex {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
+
+h1 .flex span:first-of-type {
+  font-size: 0.7em;
+}
+
+h1 .flex span:last-of-type {
+  font-size: 1.2em;
+}
+
+#years {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+  color: #fff;
+  background-color: #0a0a23;
+  z-index: 999;
+  margin: 0 -2px;
+  padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+}
+
+#years span[class] {
+  font-weight: bold;
+  width: 4.5rem;
+  text-align: right;
+  background-color: rgb(122, 122, 122);
+  border: 1px solid aliceblue;
+}
+
+.table-wrap {
+  padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+/* % targets all elements that do not match the selector. in this case it targets any span elements that do not have the sr-only class this is so that the bottom rules for span[class~="sr-only"] are not overwritten*/
+/* span:not(.sr-only) {
+  font-weight: normal;
+} */
+
+/* %with the !important added to the inclusion selector below we dont need the :not() selector */
+span {
+  font-weight: normal;
+}
+
+/* !following selectors are to hide the elements visually but still announced by screen readers */
+/* ?css clip property to define the visible portions of an element */
+
+/* %this rule will select any span element whose class includes sr-only so it wont select those that dont include sr only*/
+span[class~="sr-only"] {
+  border: 0 !important;
+  background-color: aqua !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  /* %3properties below ensure that not only are the elements not visible, they are not even within the page view */
+  position: absolute !important;
+  margin: -1px !important;
+  padding: 0 !important;
+}
+
+table {
+  /* border: 1px solid saddlebrown; */
+  border-collapse: collapse;
+  border: 0;
+  width: 100%;
+  position: relative;
+  margin-top: 3rem;
+}
+
+table caption {
+  color: #356eaf;
+  font-size: 1.3em;
+  font-weight: normal;
+  position: absolute;
+  top: -2.25rem;
+  left: 0.5rem;
+}
+
+tbody td {
+  /* background-color: aquamarine;
+  border: 2px solid blue; */
+  /* %below 3 lines is to ensure that the width is fixed */
+  width: 100vw;
+  min-width: 4rem;
+  max-width: 4rem;
+  /* %if you put the value as below, the size will change as the size of the viewport changes ( the elements would shrink to the container because we are using flexbox. see f12 and check td size
+  width: 4rem;
+  width: 100%; also gives you a weird proportion */
+}
+
+tbody th {
+  width: calc(100% - 12rem);
+}
+
+tr[class="total"] {
+  font-weight: bold;
+  border: 4px double #0a0a23;
+}
+
+tr[class="total"] th {
+  text-align: left;
+  padding: 0.5rem 0 0.25rem 0.5rem;
+}
+
+tr.total td {
+  text-align: right;
+  padding: 0 0.25rem;
+}
+/* % ^ element.class is different from element .class. the space matters! */
+
+tr.total td:nth-of-type(3) {
+  padding-right: 0.5rem;
+}
+
+tr.total:hover {
+  background-color: #99c9ff;
+}
+
+td.current {
+  font-style: italic;
+}
+
+tr[class="data"] {
+  background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+
+tr.data th {
+  text-align: left;
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
+}
+
+tr.data th .description {
+  display: block;
+  font-style: italic;
+  font-weight: normal;
+  padding: 1rem 0 0.75rem;
+  /* % ^ top| left& right | bottom */
+  margin-right: -13.5rem;
+}
+
+tr.data td {
+  vertical-align: top;
+  text-align: right;
+  padding: 0.3rem 0.25rem 0;
+}
+
+tr.data td:last-of-type {
+  padding-right: 0.5rem;
+}
