@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header><h1>CSS review</h1></header>
+      <a href="#CSS_selectors" class="nav-link">CSS selectors</a>
+            <a href="#Css_layout" class="nav-link">Css layout</a>
+      <a href="#Css_positioning" class="nav-link">Css positioning</a>
+      <a href="#Css_flexbox" class="nav-link">Css flexbox</a>
+      <a href="#Css_variables" class="nav-link">Css variables</a
+        >
+    </nav>
+    <main id="main-doc">
+      <!-- %selectors -->
+      <section class="main-section" id="CSS_selectors">
+        <header>CSS selectors</header>
+        <p>
+          Selectors are the part which come before the <code>{}</code>
+        </p>
+
+        <h2>Selector types</h2>
+        <ul>
+          <li><a href="#type">Type selectors</a></li>
+          <li><a href="#desc">Descendant selectors</a></li>
+          <li><a href="#multiple">Multiple selectors</a></li>
+          <li><a href="#combine">Combining selectors</a></li>
+          <li><a href="#attr">Combining selectors</a></li>
+          <li><a href="#psuedo">Pseudo selectors</a></li>
+        </ul>
+
+        <section class="section-content">
+          <p id="type">
+            <h3>Type</h3>
+            Type selectors are the most basic selector
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Selector</th>
+                <th>Example</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Type</td>
+                <td><code>h1{}</code></td>
+                <td>Targets simple html elements</td>
+              </tr>
+          </table>
+        </section>
+
+        <section class="section-content">
+          <p id="desc">
+            <h3>Descendant</h3>
+            Refers to nested selectors. This does not refer to direct descendants. Can include multiple levels down as well
+          </p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Selector</th>
+                <th>Example</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Descendant</td>
+                <td><code>section h1{}</code></td>
+                <td>Targets nested html elements (direct and ancestor relationship)</td>
+              </tr>
+          </table>
+        </section>
+        
+        <section id="section-content">
+          <p id="multiple">
+            <h3>Multiple selectors</h3>
+            When wanting to apply the same properties to multiple selectors. 
+          </p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Selector</th>
+                <th>Example</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Multiple</td>
+                <td><code>td,th {border: 1px solid burlywood;}</code></td>
+                <td>The different selectors are separated by a comma</td>
+              </tr>
+          </table>
+        </section>
+
+        <section id="section-content">
+          <p id="combine">
+            <h3>Combining selectors</h3>
+            You combine selectors to show a SPECIFIC relationship. There is no space between the selectors to differentiate it from descendant selectors.
+          </p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Selector</th>
+                <th>Example</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Combining selectors</td>
+                <td><code>p.intro{}</code></td>
+                <td>This styling only applies to a &ltp> element with the class of .intro </td>
+              </tr>
+          </table>
+        </section>
+
+        <section id="section-content">
+          <p id="attr">
+            <h3>Attribute selectors</h3>
+            Targeting elements with certain attributes
+          </p>
+
+                    <table>
+            <thead>
+              <tr>
+                <th>Selector</th>
+                <th>Example</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Attribute selectors</td>
+                <td><code>input[type="submit"]{}</code></td>
+                <td>The selector targets input elements where the type attribute is set to <i>submit</i> </td>
+              </tr>
+          </table>
+
+        </section>
+        
+        <section id="section-content">
+          <p id="psuedo">
+            <h3>Pseudo selectors</h3>
+            Special states of classes, elements & ids
+            eg:
+            <ul>
+              <li>mouse hover</li>
+              <li>visited/unvisited links</li>
+              <li>element when in/out of focus</li>
+            </ul>
+          </p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Selector</th>
+                <th>Example</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pseudo selectors</td>
+                <td><code>div:hover{}</code></td>
+                <td>This styling only applies when mouse is hovered over the element </td>
+              </tr>
+          </table>
+        </section>
+      </section>
+
+      <!-- %variables -->
+            <section class="main-section" id="Css_variables">
+        <header>Css variables</header>
+      </section>
+
+      <!-- %layout -->
+      <section class="main-section" id="Css_layout">
+        <header>Css layout</header>
+      </section>
+
+      <!-- %positioning -->
+      <section class="main-section" id="Css_positioning">
+        <header>Css positioning</header>
+      </section>
+
+      <!-- %flexbox -->
+      <section class="main-section" id="Css_flexbox">
+        <header>Css flexbox</header>
+      </section>
+
+
+
+    </main>
+  </body>
+</html>
