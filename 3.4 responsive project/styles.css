@@ -28,6 +28,8 @@ section.main-section {
   padding: 10px 0;
 }
 
+/*! If small screens, menu should be on top. big screens on the side */
+/* % can find the basic method of styling a sidebar from w3schools */
 @media (min-width: 1025px) {
   body {
     display: grid;
