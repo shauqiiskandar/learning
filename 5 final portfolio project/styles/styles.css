@@ -1,0 +1,213 @@
+/* colour palatte
+https: //coolors.co/72736c-060602-e5ccbd-e5ccbd-e5ccbd
+#72736C nickel metalic gray
+#C1CCCE silver
+#060602 black 
+#DBC2A9 desert sand
+#C2956E camel 
+#E1EAEF light blue
+#bfa79d brownish
+#e5ccbd pink
+*/
+
+@font-face {
+  font-family: "roboto";
+  src: url(/teacherfiles/styles/font/RobotoCondensed-Regular.ttf) format("ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url(/teacherfiles/styles/font/RobotoCondensed-LightItalic.ttf)
+    format("ttf");
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url(/teacherfiles/styles/font/RobotoCondensed-Italic.ttf) format("ttf");
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url(/teacherfiles/styles/font/RobotoCondensed-Bold.ttf) format("ttf");
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "archivo";
+  src: url(/teacherfiles/styles/font/Archivo-Italic.ttf) format("ttf");
+  font-style: italic;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "courgette";
+  src: url(/teacherfiles/styles/font/Courgette-Regular.ttf) format("ttf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+  --font: #060602;
+  --gray: #72736c;
+  --sliver: #e3eef0;
+  --sand: #dbc2a9;
+  --camel: #c2956e;
+}
+
+/*! global items */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: var(--font);
+  margin: 0;
+  border: 0;
+  font-family: roboto, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img {
+  width: 300px;
+  aspect-ratio: 16/9;
+}
+
+a {
+  color: var(--sand);
+}
+
+a:hover {
+  text-decoration: none;
+  background-color: var(--gray);
+  border-radius: 2px;
+  padding: 1px;
+}
+
+/*% to layout the items in each individual section including header and footer*/
+.content-wrap {
+  display: grid;
+  row-gap: 1em;
+  max-width: 800px;
+  width: 75%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+h1,
+h2 {
+  font-family: courgette, cursive;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h2 + p {
+  margin-top: 0;
+}
+
+.divider > section {
+  border-bottom: 1px dashed var(--gray);
+  padding: 25px 0;
+}
+
+/*! profile */
+header {
+  background-color: var(--gray);
+  color: var(--sliver);
+  text-align: center;
+}
+
+/*! work exp */
+
+section.job-item {
+  padding-top: 0;
+}
+
+/*% to layout each individual job item in the work exp section  */
+.job-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2em 2em;
+  row-gap: 50px;
+  /* grid-auto-columns: 1fr 2fr; */
+}
+
+/*! Projects */
+.projects {
+  background-color: var(--sliver);
+}
+
+.projects .btn {
+  color: var(--sliver);
+  background-color: var(--gray);
+  text-decoration: none;
+  padding: 0.3em;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.projects .btn:hover {
+  background-color: rgb(114, 115, 108, 75%);
+}
+
+.project-item {
+  display: grid;
+  grid-template: 1fr / 2fr 1fr;
+}
+
+/*! education */
+.education ul li {
+  width: 60%;
+}
+
+/*! footer */
+footer {
+  background-color: var(--sand);
+  padding: 50px;
+}
+
+footer .content-wrap {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer a {
+  color: var(--gray);
+  padding: 10px;
+  /* display: inline-block; */
+}
+
+footer a:hover {
+  padding: 10px;
+  text-decoration: none;
+  background-color: var(--sliver);
+  border-radius: 5px;
+}
